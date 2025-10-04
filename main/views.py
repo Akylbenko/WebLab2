@@ -1,5 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
 def greeting(request):
-    return HttpResponse("<h1>Добро пожаловать в Новостной Блог!</h1>")
+    return render(request, 'main/greeting.html')
+
+def about(request):
+    return render(request, 'main/about.html')
+
+def contact(request):
+    return render(request, 'main/contact.html')
