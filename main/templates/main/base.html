@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></head>
 <body>
     <aside>
-        <img src="{% static 'main/img/logo.png' %}" alt="Логотип" class="logo">
+        <img src="{% static 'main/img/logo.png' %}" alt="Логотип">
         <span class="logo">NewsBlog</span>
         <h3>Навигация</h3>
         <ul>
-            <li><a href=""><i class="fas fa-house"></i> Главная</a></li>
-            <li><a href=""><i class="fas fa-info-circle"></i> О нас</a></li>
-            <li><a href=""><i class="fas fa-phone"></i> Контакты</a></li>
+            <li><a href="{% url 'home' %}"><i class="fas fa-house"></i> Главная</a></li>
+            <li><a href="{% url 'about' %}"><i class="fas fa-info-circle"></i> О проекте</a></li>
+            <li><a href="{% url 'contact' %}"><i class="fas fa-phone"></i> Контакты</a></li>
         </ul>
     </aside>
     <main>

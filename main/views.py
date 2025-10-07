@@ -1,6 +1,6 @@
 from django.shortcuts import render
 def greeting(request):
-    return render(request, 'main/greeting.html')
+    return render(request, 'main/home.html')
 
 def about(request):
     return render(request, 'main/about.html')
