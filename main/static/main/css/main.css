@@ -29,18 +29,18 @@ aside .logo {
     top: 10px;
 }
 
-aside h3{
+aside h3 {
     margin-top: 80px;
     font-size: 30px;
 }
 
-aside ul{list-style: none}
+aside ul {list-style: none}
 
-aside ul li a{
+aside ul li a {
     color: #fff;
     display: block;
     margin-top: 30px;
-    transition: transform 0.1s ease;
+    transition: transition 0.1s ease;
     font-size: 17px;
 }
 
@@ -50,7 +50,7 @@ aside ul li:hover, aside ul a:hover {
     transform: scale(1.05);
 }
 
-main .features{
+main .features {
     float: left;
     color: white;
     margin-top: 80px;
@@ -58,8 +58,14 @@ main .features{
     width: 75%;
 }
 
-main .features h1{font-size: 50px;}
-main .features p{font-size: 25px; margin: 25px;}
+main .features h1 {font-size: 50px;}
+main .features p {font-size: 25px; margin: 25px;}
+
+form {
+    margin-left: 32%;
+    margin-top: 50px;
+    width: 500px;
+}
 
 
 
