@@ -78,7 +78,8 @@ form {
 .alert-warning {
     float: center;
     width: 700px;
-    margin: 20px 25%;
+    margin: 20px;
+    margin-left: 23%;
     text-align: left;
 }
 
@@ -97,6 +98,25 @@ form {
     background: white;
     border-radius: 5px;
 }
+
+h1 {
+    margin-left: 11%;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-left: 11%;
+}
+
+.simple-text {
+    float: left;
+    color: white;
+    text-align: left;
+    font-size: 25px;
+}
+
+
+
 
 
 
