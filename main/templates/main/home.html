@@ -3,8 +3,24 @@
 {% block title %}Главная страница{% endblock %}
 {% block content %}
     <div class="features">
-        <h1>Главная страница</h1>
-        <p>Добро пожаловать в новостной блог!</p>
-        {{ news }}
+        <h1>Добро пожаловать в новостной блог!</h1>
+
+        {% if articles %}
+            {% for article in articles %}
+                <div class="alert alert-warning position-relative">
+                    <h3>
+                        {{ article.title }}
+                        {% if article.date|date:"Y-m-d" == now|date:"Y-m-d" %}
+                            <span class="badge bg-danger ms-2">Новое!</span>
+                        {% endif %}
+                    </h3>
+                    <p><strong>Дата публикации:</strong> {{ article.date|date:"d.m.Y H:i" }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-info">
+                <p>Пока нет новостей. Зайдите позже!</p>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}

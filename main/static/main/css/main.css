@@ -4,16 +4,24 @@ aside a {
 
 body {
     background: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
 }
 
 aside {
-    float: left;
+    float: none;
     background: #181818;
     width: 22%;
     padding: 2.5%;
-    height: 100vh;
     border-right: 5px solid #4d4d4d;
     color: #fff;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
 }
 
 aside img {
@@ -40,7 +48,7 @@ aside ul li a {
     color: #fff;
     display: block;
     margin-top: 30px;
-    transition: transition 0.1s ease;
+    transition: transition ease;
     font-size: 17px;
 }
 
@@ -67,7 +75,28 @@ form {
     width: 500px;
 }
 
+.alert-warning {
+    float: center;
+    width: 700px;
+    margin: 20px 25%;
+    text-align: left;
+}
 
+.alert-info {
+    float: center;
+    width: 700px;
+    margin: 20px 25%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.error-message {
+    color: red;
+    margin: 10px;
+    text-align: center;
+    background: white;
+    border-radius: 5px;
+}
 
 
 

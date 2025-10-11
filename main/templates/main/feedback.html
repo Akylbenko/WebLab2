@@ -1,15 +1,36 @@
 {% extends 'main/base.html' %}
 
 {% block title %}Обратная связь{% endblock %}
+
 {% block content %}
     <div class="features">
         <h1>Обратная связь</h1>
         <form method="post">
             {% csrf_token %}
-            <input type="text" placeholder="Имя" class="form-control"><br>
-            <input type="text" placeholder="Email" class="form-control"><br>
-            <textarea class="form-control" placeholder="Сообщение"></textarea><br>
-            <button class="btn btn-success" type="submit">Добавить новость</button>
+            {{ form.name }}<br>
+            {{ form.email }}<br>
+            {{ form.content }}<br>
+            {% if error %}
+                <div class="error-message">{{ error }}</div>
+            {% endif %}
+            <button class="btn btn-success" type="submit">Добавить комментарий</button>
         </form>
+
+        <hr>
+
+        <h2>Все комментарии:</h2>
+        {% if Feedbacks %}
+            {% for feedback in Feedbacks %}
+                <div class="alert alert-warning">
+                    <h3>{{ feedback.name }}</h3>
+                    <p><strong>Почта:</strong> {{ feedback.email }}</p>
+                    <p>{{ feedback.content }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-info">
+                <p>Пока нет комментариев. Будьте первым!</p>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
