@@ -20,7 +20,7 @@
             {% for feedback in Feedbacks %}
                 <div class="alert alert-warning">
                     <h3>{{ feedback.name }}</h3>
-                    <p><strong>Почта:</strong> {{ feedback.email }}</p>
+                    <h3>{{ feedback.email }}</h3>
                     <p>{{ feedback.content }}</p>
                 </div>
             {% endfor %}
