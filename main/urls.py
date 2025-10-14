@@ -7,3 +7,5 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('feedback', views.feedback, name='feedback'),
 ]
+
+# тетаывоп ты паво павтоп автоп
